@@ -24,7 +24,6 @@ public class CameraMovement : MonoBehaviour
 		transform.position = Bezier.transform.position;
 		float length = CalculateLength(bezierController.curveList[1]);
 		
-		
 		//calculate the length of each curve and add them to the same list
 		for (int i = 0; i < bezierController.curveList.Count; i++)
 		{
@@ -42,11 +41,8 @@ public class CameraMovement : MonoBehaviour
 		Timer += Time.deltaTime * speed * 50f;
 		_PutPointsOnCurve();
 		
-		
 		print("Timer = " + Timer);
 		
-		//float length = CalculateLength(bezierController.curveList[1]);
-		//print(length);
 	}
 
 	
@@ -71,7 +67,6 @@ public class CameraMovement : MonoBehaviour
 				
 				//where camera should be this frame
 				transform.position = CalculateBezier(bezierController.curveList[i], Timer);
-				//transform.position = Vector3.Lerp(relativePos, CalculateBezier(bezierController.curveList[i], Timer), smoothing * Time.deltaTime);
 
 			}
 			

@@ -43,7 +43,9 @@ public class BezierController : MonoBehaviour
 			if (i == curveList.Count - 1)
 			{
 				curveList[i].endPoint = startPoint1;
-				curveList[i].endTangent.Set(2 * startPoint1.x - startTangent1.x, 2 * startPoint1.y - startTangent1.y, 2 * startPoint1.z - startTangent1.z);
+				curveList[i].endTangent.Set(2 * startPoint1.x - startTangent1.x, 
+					2 * startPoint1.y - startTangent1.y, 
+					2 * startPoint1.z - startTangent1.z);
 			}
 			//for bezier curves that are not the first one nor the last one
 			else if(i > 0)
