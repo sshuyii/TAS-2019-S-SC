@@ -433,35 +433,6 @@ Transform:
   m_Father: {fileID: 984409606}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &826837507
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 826837508}
-  m_Layer: 0
-  m_Name: Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &826837508
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 826837507}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 462.98242, y: -132.83388, z: -541.66113}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2102003613}
-  m_Father: {fileID: 984409606}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &926681813
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +611,7 @@ Transform:
   m_LocalPosition: {x: 1250, y: 212.338, z: 1250}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 826837508}
+  - {fileID: 2102003613}
   - {fileID: 75304902}
   - {fileID: 559177465}
   m_Father: {fileID: 0}
@@ -672,13 +643,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1478157868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82fc435df34364e828b60b90ee8dff5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bezierController: {fileID: 2102003614}
   Bezier: {fileID: 439636435}
+  Camera: {fileID: 0}
 --- !u!81 &1478157872
 AudioListener:
   m_ObjectHideFlags: 0
@@ -823,8 +795,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2102003613}
   - component: {fileID: 2102003614}
+  - component: {fileID: 2102003615}
   m_Layer: 0
-  m_Name: BezierController
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -837,10 +810,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2102003612}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -462.98242, y: 132.83388, z: 541.66113}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 826837508}
+  m_Father: {fileID: 984409606}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2102003614
@@ -865,3 +838,17 @@ MonoBehaviour:
   - {fileID: 439636443}
   - {fileID: 439636442}
   - {fileID: 439636445}
+--- !u!114 &2102003615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2102003612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82fc435df34364e828b60b90ee8dff5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bezierController: {fileID: 2102003614}
+  Bezier: {fileID: 439636435}
+  Camera: {fileID: 1478157868}

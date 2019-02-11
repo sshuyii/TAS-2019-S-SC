@@ -8,6 +8,7 @@ public class CameraMovement : MonoBehaviour
 
 	public BezierController bezierController;
 	public GameObject Bezier;
+	public GameObject Camera;
 	
 	private float Timer;
 	private List<float> curveLengthList = new List<float>();
@@ -21,7 +22,7 @@ public class CameraMovement : MonoBehaviour
 	void Start()
 	{
 		
-		transform.position = Bezier.transform.position;
+		Camera.transform.position = Bezier.transform.position;
 		float length = CalculateLength(bezierController.curveList[1]);
 		
 		//calculate the length of each curve and add them to the same list
@@ -41,7 +42,7 @@ public class CameraMovement : MonoBehaviour
 		Timer += Time.deltaTime * speed * 50f;
 		_PutPointsOnCurve();
 		
-		print("Timer = " + Timer);
+		//print("Timer = " + Timer);
 		
 	}
 
@@ -61,12 +62,14 @@ public class CameraMovement : MonoBehaviour
 				
 				
 				//look at the next spot on the bezier curve
-				Vector3 relativePos = CalculateBezier(bezierController.curveList[i], Timer + Time.deltaTime * speed) - transform.position;
-				Quaternion rotation = Quaternion.LookRotation(relativePos, Vector3.up);
-				transform.rotation = rotation;
+				Vector3 relativePos = CalculateBezier(bezierController.curveList[i], Timer + Time.deltaTime * speed) - Camera.transform.position;
+				Quaternion rotation = Quaternion.LookRotation(relativePos);
+				Camera.transform.rotation = rotation;
+				print("rotation =" + rotation);
+				
 				
 				//where camera should be this frame
-				transform.position = CalculateBezier(bezierController.curveList[i], Timer);
+				Camera.transform.position = CalculateBezier(bezierController.curveList[i], Timer);
 
 			}
 			
