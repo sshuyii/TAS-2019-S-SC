@@ -13,6 +13,7 @@ public class ThirdPersonCameraController : MonoBehaviour {
     private Transform _cameraTransform;
     private Transform _cameraLookTarget;
     private Transform _avatarTransform;
+    private Transform _cameraPivotTransform;
     private Rigidbody _avatarRigidbody;
     #endregion
 
@@ -57,18 +58,23 @@ public class ThirdPersonCameraController : MonoBehaviour {
         _app = GameObject.Find("Application").transform;
         _view = _app.Find("View");
         _cameraBaseTransform = _view.Find("CameraBase");
-        _cameraTransform = _cameraBaseTransform.Find("Camera");
+        _cameraPivotTransform = _cameraBaseTransform.Find("CameraPivot");
+        _cameraTransform = _cameraPivotTransform.Find("Camera");
         _cameraLookTarget = _cameraBaseTransform.Find("CameraLookTarget");
 
         _avatarTransform = _view.Find("AIThirdPersonController");
         _avatarRigidbody = _avatarTransform.GetComponent<Rigidbody>();
     }
 
-    private float _idleTimer;  
+    private float _idleTimer;
+    private bool _MousePressed;
    
     private void Update()
     {
         Camera.main.fieldOfView = fov_Base;
+        _cameraBaseTransform.position = _avatarTransform.position;
+        _cameraPivotTransform.position = _avatarTransform.position + new Vector3(0, 0, 2);
+        //_cameraPivotTransform.rotation = _cameraBaseTransform.rotation;
         
         //deciding when in which state
         if (Input.GetMouseButton(1))
@@ -78,10 +84,14 @@ public class ThirdPersonCameraController : MonoBehaviour {
         else if (!Input.GetMouseButton(1) && _idleTimer > 1)
         {
             _currentState = CameraStates.Idle;
+            
         }
         else
-        {_currentState = CameraStates.Automatic;}
-
+        {
+            _currentState = CameraStates.Automatic;
+        }
+        
+        
         //what should the camera do under each state
         if (_currentState == CameraStates.Automatic)
         {
@@ -91,30 +101,35 @@ public class ThirdPersonCameraController : MonoBehaviour {
         {
             _ManualUpdate();
         }
-        else{_IdleUpdate();}
+        else
+        {
+            _IdleUpdate();
+        }
         print("idleTimer = " + _idleTimer);
         
-//        if (Input.GetMouseButton(1))
-//            _ManualUpdate();
-//        else
-//            _AutoUpdate();
     }
 
     #region States
 
     private int TimerLookAtOOI;
+    private Transform WhatIsClosesetOOI;
+    
     private void _AutoUpdate()
     {
         _ComputeData();
-        
+        print("_Helper_IsThereOOI() = " + _Helper_IsThereOOI());
         if (_Helper_IsThereOOI())
         {
-            TimerLookAtOOI = 100;
+            TimerLookAtOOI = 80;
+            WhatIsClosesetOOI = _Helper_WhatIsClosestOOI();
+
+           
         }
 
-        if (TimerLookAtOOI > 50)
+        if (TimerLookAtOOI > 40)
         {
-            _LookAtObject(_Helper_WhatIsClosestOOI());
+
+            _LookAtObject(WhatIsClosesetOOI);
 
         }
         else if(TimerLookAtOOI > 0)
@@ -132,8 +147,12 @@ public class ThirdPersonCameraController : MonoBehaviour {
     }
     private void _ManualUpdate()
     {
-        _FollowAvatar();
+        //_FollowAvatar();
+        //follow avatar changes the camera's position with a lerp, here it is better that the change has no delay
+        //_cameraTransform.position = _avatarTransform.position - _avatarLookForward * _followDistance_Applied +
+        //                            Vector3.up * _verticalOffset_Applied;
         _ManualControl();
+        _LookAtAvatar();
     }
     private void _IdleUpdate()
     {
@@ -185,7 +204,7 @@ public class ThirdPersonCameraController : MonoBehaviour {
         _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _avatarTransform.position - _avatarLookForward * _followDistance_Applied + Vector3.up * _verticalOffset_Applied, Time.deltaTime);
         
         //adjusting fov
-        Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, _fieldOfView_Applied, Time.deltaTime);
+        Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, _fieldOfView_Applied, Time.deltaTime * 1.5f);
 
     }
 
@@ -198,25 +217,12 @@ public class ThirdPersonCameraController : MonoBehaviour {
     private Vector3 _cameraSupposedTransformPos;
     private float _followDistance_Applied_OOI;
     private float _verticalOffset_Applied_OOI;
-    
+     
     
     Vector3 TargetOfLAO;
+   
     
-    void OnDrawGizmosSelected()
-    {
-        // Draw a yellow sphere at the transform's position
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(TargetOfLAO, 1);
-    }
-
-    private float EaseInOutCubic(float t, float b, float c, float d)
-    {
-        t /= d/2;
-        if (t < 1) return c / 2 * t * t * t + b;
-        t -= 2;
-        return c / 2 * (t * t * t + 2) + b;
-    }
-
+   
     private void _LookAtObject(Transform oOI)
     {
         //the look at target moves slowly to where the player is
@@ -224,31 +230,24 @@ public class ThirdPersonCameraController : MonoBehaviour {
                 
         
         _cameraLookTarget.position = Vector3.Lerp(_cameraLookTarget.position, Center, Time.deltaTime);
-        print("TargetOOI = " + TargetOfLAO);
+        //print("TargetOOI = " + TargetOfLAO);
         
-        _cameraTransform.LookAt(_cameraLookTarget);        //还要有一个lerp给Lookat
-
+        _cameraTransform.LookAt(_cameraLookTarget);
 
 
         _OOISlider =  Mathf.Lerp(_OOISlider, 1, Time.deltaTime);
-
-        print("OOISlider = " + _OOISlider);
+        //print("OOISlider = " + _OOISlider);
         
-//        _followDistance_Applied_OOI =
-//            Mathf.Lerp((_cameraTransform.position - _avatarTransform.position).z, _cameraSupposedTransformPos.z, _OOISlider);
-//        _verticalOffset_Applied_OOI =
-//            Mathf.Lerp((_cameraTransform.position - _avatarTransform.position).y, _cameraSupposedTransformPos.y, _OOISlider);
-        
-        //where the camera is supposed to be
-        
+      
         //_cameraTransform.position = _avatarTransform.position - 3 * _avatarLookForward * _followDistance_Applied + 4 * Vector3.up * _verticalOffset_Applied;
-        _cameraSupposedTransformPos = _avatarTransform.position - 1.2f * _avatarLookForward * _followDistance_Applied + 2f * Vector3.up * _verticalOffset_Applied;
+        _cameraSupposedTransformPos = _avatarTransform.position - 1.2f * _avatarLookForward * _followDistance_Applied + 3f * Vector3.up * _verticalOffset_Applied;
 
         _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _cameraSupposedTransformPos, Time.deltaTime);
         
         //Camera.main.fieldOfView = _fieldOfView_Applied;
 
         TimerLookAtOOI -= 1;
+        print("TimerLookAtOOI = " + TimerLookAtOOI);
     }
 
     private void _LookAwayFromObject()
@@ -261,30 +260,108 @@ public class ThirdPersonCameraController : MonoBehaviour {
         _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _cameraSupposedTransformPos, Time.deltaTime);
     }
 
+    private float rotateSpeed = 20;
+    private float x_rot;
+    private float y_rot;
+    private float x_rot_total;
+
+    public float X_sensitivity = 2f;//镜头跟随鼠标x向移动灵敏度  
+    public float Y_sensitivity = 2f;//镜头跟随鼠标y向移动灵敏度  
+    public float MinX_rotation = 5F;//镜头绕自身x轴旋转角度，抬头极限，z轴正方向是模型运动的前方  
+    public float MaxX_rotation = 60F;//镜头绕自身x轴旋转角度，低头极限  
+    private Vector3 originalPosition;
+    private Quaternion originalRotation;
+
+
+    private Vector3 _camPivotEulerHold;
+    private Vector3 _camBaseEulerHold;
+    private Vector3 _cameraSetPosition;
+
     //控制相机旋转的角度在80度以内
     private void _ManualControl()
     {
-        Vector3 _camEulerHold = _cameraTransform.localEulerAngles;
+        _camPivotEulerHold = _cameraPivotTransform.localEulerAngles;
+        _camBaseEulerHold = _cameraBaseTransform.localEulerAngles;
+        _cameraSetPosition = _cameraTransform.position;
+
+        print("_camPivotEulerHold = " + _camPivotEulerHold);
+
 
         if (Input.GetAxis("Mouse X") != 0)
-            _camEulerHold.y += Input.GetAxis("Mouse X");
-
-        if (Input.GetAxis("Mouse Y") != 0)
         {
-            float temp = _camEulerHold.x - Input.GetAxis("Mouse Y");
+            _camBaseEulerHold.y += Input.GetAxis("Mouse X") * X_sensitivity;
+            print("_camBaseEulerHold.y = " + _camBaseEulerHold.y);
+        }
+
+
+        print("_Helper_IsCameraIntersecting() = "+ _Helper_IsCameraIntersecting()); 
+        
+        if (Input.GetAxis("Mouse Y") != 0 && _Helper_IsCameraIntersecting() == false &&
+            _cameraTransform.position.y > 0)
+        {
+            float temp = _camPivotEulerHold.x + Input.GetAxis("Mouse Y")* Y_sensitivity;
+
+            
+            
+            print("temp = " + temp);
+
             //保证角度大于零
             temp = (temp + 360) % 360;
 
             if (temp < 180)
-                temp = Mathf.Clamp(temp, 0, 80);
+            {
+                temp = Mathf.Clamp(temp, 30, 65);
+            }
             else
-                temp = Mathf.Clamp(temp, 360 - 80, 360);
+            {
+                temp = Mathf.Clamp(temp, 360 - 65, 360 - 30);
+            }
+            
+            _cameraSetPosition.z = _cameraBaseTransform.position.z ;
 
-            _camEulerHold.x = temp;
+            _camPivotEulerHold.x = temp;
+            print("_camPivotEulerHold.x = " + _camPivotEulerHold.x);
+
+        }
+        
+        //To decide if the camera is below or above pivot
+        if (_cameraTransform.position.y < 2)
+        {
+            _cameraSetPosition.z = _cameraPivotTransform.position.z - 1.5f;
+      
+            if(_cameraLookTarget.transform.position.y < 2f)
+            {
+                _cameraLookTarget.transform.position += new Vector3(0, 0.03f, 0);
+            }
+            print("camera is below");
+        }
+        else
+        {
+            _cameraSetPosition.z = _cameraPivotTransform.position.z - 4f;
+            print("camera is above");
+
         }
 
-        Debug.Log("The V3 to be applied is " + _camEulerHold);
-        _cameraTransform.localRotation = Quaternion.Euler(_camEulerHold);
+
+        //Debug.Log("The V3 to be applied is " + _camEulerHold);
+
+        _cameraBaseTransform.localEulerAngles = _camBaseEulerHold;
+        if(_Helper_IsCameraIntersecting() == false)
+        {
+            _cameraPivotTransform.localEulerAngles = _camPivotEulerHold;
+        }        
+
+        
+        _cameraTransform.position = Vector3.Lerp(_cameraTransform.position, _cameraSetPosition, Time.deltaTime);
+
+        //_cameraTransform.position = new Vector3(_cameraTransform.position.x,_cameraTransform.position.y, _cameraSetPosition.z);
+
+
+
+
+
+
+
     }
     #endregion
 
@@ -302,6 +379,36 @@ public class ThirdPersonCameraController : MonoBehaviour {
             return true;
         else return false;
     }
+   
+    private bool _Helper_IsCameraIntersecting()
+    {
+        
+        Collider[] stuffInSphere = Physics.OverlapSphere(_cameraTransform.position, 3.5f);
+        
+        for (int i = 0; i < stuffInSphere.Length; i++)
+        {
+            if (stuffInSphere[i].CompareTag("Player") || stuffInSphere[i].CompareTag("Ground"))
+            {    
+                print("raycasting");
+
+                return true;
+            }
+        }
+
+        return false;
+
+//        RaycastHit hit;
+//        Debug.DrawRay(_cameraTransform.position, _cameraTransform.TransformDirection(Vector3.forward) * 1.4f, Color.yellow);
+//        if (Physics.Raycast(_cameraTransform.position, _cameraTransform.TransformDirection(Vector3.forward), 1.4f))
+//        {    
+//                //_cameraTransform = _cameraCurrentTransform;
+//                print("raycasting");
+//            return true;
+//        }
+//
+//        return false;
+    }
+    
     private bool _Helper_IsThereOOI()
     {
         //Returns an array with all colliders touching or inside the sphere.
@@ -318,13 +425,41 @@ public class ThirdPersonCameraController : MonoBehaviour {
 
         return _oOIPresent;
     }
+    
 
     private Transform _Helper_WhatIsClosestOOI()
     {
         //Sphere Overlap
         //Sort for shortest
         //Return the shortest
-        return transform;
+        Transform tMin = null;
+        float minDist = Mathf.Infinity;
+
+
+        List <Transform> OOIList = new List<Transform>();
+        Collider[] stuffInSphere = Physics.OverlapSphere(_avatarTransform.position, 5f);
+        for (int i = 0; i < stuffInSphere.Length; i++)
+        {
+            if (stuffInSphere[i].CompareTag("ObjectOfInterest"))
+            {
+                OOIList.Add(stuffInSphere[i].transform);
+            }
+        }
+
+        for (int i = 0; i < OOIList.Count; i++)
+        {
+            float dist = Vector3.Distance(OOIList[i].position, _avatarTransform.position);
+            if (dist < minDist)
+            {
+                tMin = OOIList[i];
+
+                minDist = dist;
+            }
+        }
+        
+        return tMin;
+
+  
     }
     
     #endregion
