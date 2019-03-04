@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fc8e6f7-3514-4442-996e-c00ebcf1195a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W4/.idea/.idea.TAS_W4/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W4/.idea/.idea.TAS_W4/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W4/.idea/.idea.TAS_W4/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W4/.idea/.idea.TAS_W4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W4/.idea/.idea.TAS_W4/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W5/.idea/.idea.TAS_W5/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W5/.idea/.idea.TAS_W5/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W5/.idea/.idea.TAS_W5/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W5/.idea/.idea.TAS_W5/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TAS_W2/TAS_W5/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W5/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TAS_W2/TAS_W5/Assets/Scripts/ChunkExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W5/Assets/Scripts/ChunkExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TAS_W2/TAS_W5/Assets/Scripts/CubeTreadmill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W5/Assets/Scripts/CubeTreadmill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TAS_W2/TAS_W5/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../TAS_W2/TAS_W5/ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TAS_W3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TAS_W3/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +22,6 @@
             <state relative-caret-position="240">
               <caret line="57" column="14" selection-start-line="57" selection-end-line="58" />
               <folding>
-                <marker date="1550655157974" expanded="false" signature="6:127" ph="..." />
                 <marker date="1550655157974" expanded="true" signature="186:14156" ph="{...}" />
                 <marker date="1550655157974" expanded="false" signature="193:542" ph="Internal References" />
                 <marker date="1550655157974" expanded="false" signature="548:896" ph="Public Tuning Variables" />
@@ -120,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
@@ -131,12 +125,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <option name="show-hidden-items" value="false" />
         <option name="show-project-names" value="true" />
       </pane>
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
@@ -203,6 +197,7 @@
       <workItem from="1550778982542" duration="441000" />
       <workItem from="1551068706970" duration="51000" />
       <workItem from="1551651818577" duration="525000" />
+      <workItem from="1551668612305" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="First time committed: camera now looks at both the target object and the avatar, lerp added to how the camera moves.">
       <created>1550360439215</created>
@@ -222,7 +217,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41876000" />
+    <option name="totallyTimeSpent" value="41879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -234,9 +229,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="1027" extended-state="1" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2026862" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20512821" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />

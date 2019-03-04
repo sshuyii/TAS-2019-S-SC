@@ -17,7 +17,9 @@ public class CubeTreadmill : MonoBehaviour
     private List<Vector2> _chunkGenerate = new List<Vector2>();
     private List<Vector2> _chunkDestroy = new List<Vector2>();
     private List<Vector2> _chunkStillList;
-
+    
+    public int _horizontalSize;
+    public int _verticalSize;
     
     private Dictionary<Vector2, GameObject> _chunkExample = new Dictionary<Vector2, GameObject>();
 
@@ -38,14 +40,14 @@ public class CubeTreadmill : MonoBehaviour
     void Start()
     {
        
-        //产生36个chunkExample
+        //产生16个chunkExample
         _chunks = new List<GameObject>();
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < _verticalSize; i++)
         {
-            for (int j = -2; j < 2; j++)
+            for (int j = (0 - _horizontalSize)/2; j < _horizontalSize/2; j++)
             {
-                _chunks.Add(Instantiate(ChunkExample, new Vector3(target.transform.position.x + j * 16, 0, target.transform.position.z + i * 16), Quaternion.identity));
+                _chunks.Add(Instantiate(ChunkExample, new Vector3(target.transform.position.x + j * sizeSquare, 0, target.transform.position.z + i * sizeSquare), Quaternion.identity));
             }
         }
         
@@ -103,7 +105,7 @@ public class CubeTreadmill : MonoBehaviour
 
             {
                 //生成
-                _chunks.Add(Instantiate(ChunkExample, new Vector3(_chunkGenerate[i].x * 16, 0, _chunkGenerate[i].y * 16), Quaternion.identity));
+                _chunks.Add(Instantiate(ChunkExample, new Vector3(_chunkGenerate[i].x * sizeSquare, 0, _chunkGenerate[i].y * sizeSquare), Quaternion.identity));
             }
             _chunkGenerate.Clear();
         }
@@ -118,8 +120,8 @@ public class CubeTreadmill : MonoBehaviour
     private Vector2 UpdateCameraPos()
     {
         //得到camera所处的chunkExample坐标的位置
-        int _currentCamCoordX = (int)(target.transform.position.x / 16); //currently size Square = 8
-        int _currentCamCoordZ = (int)(target.transform.position.z / 16);
+        int _currentCamCoordX = (int)(target.transform.position.x / sizeSquare); //currently size Square = 8
+        int _currentCamCoordZ = (int)(target.transform.position.z / sizeSquare);
 
         print("currentCamCoord =" + _currentCamCoordX + "," + _currentCamCoordZ);
 
@@ -136,8 +138,8 @@ public class CubeTreadmill : MonoBehaviour
 
         foreach (GameObject g in _chunks)
         {
-            int _gridX = (int)(g.transform.position.x / 16);
-            int _gridY = (int)(g.transform.position.z / 16);
+            int _gridX = (int)(g.transform.position.x / sizeSquare);
+            int _gridY = (int)(g.transform.position.z / sizeSquare);
 
             Vector2 _grid = new Vector2(_gridX, _gridY);
 
@@ -164,9 +166,9 @@ public class CubeTreadmill : MonoBehaviour
         List<Vector2> _camView = new List<Vector2>();
 
         //找到应该生成chunks的格点们,在camera周围
-        for (int i = -2; i < 2; i++)
+        for (int i = (0 - _horizontalSize)/2; i < _horizontalSize/2; i++)
         {
-            for (int j = 0; j < 4; j++)
+            for (int j = 0; j < _verticalSize; j++)
             {
                 
                 _camView.Add(new Vector2(CamPos.x + i, CamPos.y + j));

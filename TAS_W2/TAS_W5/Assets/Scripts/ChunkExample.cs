@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Linq;
 using UnityEngine;
 
 public class ChunkExample : MonoBehaviour
@@ -14,14 +15,20 @@ public class ChunkExample : MonoBehaviour
     private Vector2[] _uVs;
     private Vector3[] _normals;
 
-    public int sizeSquare;
+    private int sizeSquare;
     private int _totalVertInd;
     private int _totalTrisInd;
+    private GameObject _treadmill;
+    private CubeTreadmill CubeTreadmill;
+    private List<Vector3> _boarderVertsList = new List<Vector3> ();
 
     private void Awake()
     {
         _myMF = gameObject.AddComponent<MeshFilter>();
         _myMR = gameObject.AddComponent<MeshRenderer>();
+        _treadmill = GameObject.Find("Treadmill");
+        CubeTreadmill = _treadmill.GetComponent<CubeTreadmill>();
+        sizeSquare = CubeTreadmill.sizeSquare;
 
         _myMesh = new Mesh();
     }
@@ -36,15 +43,17 @@ public class ChunkExample : MonoBehaviour
     private void _Init()
     {
         _totalVertInd = (sizeSquare + 1) * (sizeSquare + 1);
-        _totalTrisInd = (sizeSquare) * (sizeSquare) * 2 * 3;
+        _totalTrisInd = (sizeSquare) * (sizeSquare) * 2 * 3;//一共有这么多个三角形的顶点
         _verts = new Vector3[_totalVertInd];
         _tris = new int[_totalTrisInd];
         _uVs = new Vector2[_totalVertInd];
         _normals = new Vector3[_totalVertInd];
     }
 
+ 
     private void _CalcMesh()
     {
+        //生成每个点的高度
         for (int z = 0; z <= sizeSquare; z++)
         {
             for (int x = 0; x <= sizeSquare; x++)
@@ -52,13 +61,23 @@ public class ChunkExample : MonoBehaviour
                 _verts[(z * (sizeSquare + 1)) + x] = 
                     new Vector3(x, 
                     Perlin.Noise(
-                        5 * ((float)x + transform.position.x) / 8,// * 10得到一个起伏更明显的terrain 
-                        5 * ((float)z + transform.position.z) / 8), 
-                    z);
+                        10 * ((float)x + transform.position.x) / 8,// * 10得到一个起伏更明显的terrain 
+                        10 * ((float)z + transform.position.z) / 8), 
+                        z);
+                
+//                //找到所有边缘的点，放进一个list中
+//                if (z == sizeSquare || x == sizeSquare || z == 0 || x == 0)
+//                {
+//                    _boarderVertsList.Add(_verts[(z * (sizeSquare + 1)) + x]);
+//                }
             }
+
+           
         }
 
+        //每个面的朝向
         int _triInd = 0;
+       
 
         for (int i = 0; i < sizeSquare; i++)
         {
@@ -81,14 +100,45 @@ public class ChunkExample : MonoBehaviour
                 _triInd++;
                 _tris[_triInd] = bottomRight;
                 _triInd++;
+                
             }
+        }
+        
+
+        //CALCULATING NORMALS
+        for (int i = 0; i < _totalTrisInd/3; i++)
+        {
+            //print("GeneratingMeshNormals Times = " + i);
+            int normalTriangleIndex = i;
+            int vertexIndexA = _tris[normalTriangleIndex];
+            int vertexIndexB = _tris[normalTriangleIndex + 1];
+            int vertexIndexC = _tris[normalTriangleIndex + 2];
+
+            Vector3 triangleNormal = SurfaceNormal(vertexIndexA, vertexIndexB, vertexIndexC);
+            _normals[vertexIndexA] += triangleNormal.normalized;
+            _normals[vertexIndexB] += triangleNormal.normalized;
+            _normals[vertexIndexC] += triangleNormal.normalized;
         }
     }
 
+    private Vector3 SurfaceNormal(int indexA, int indexB, int indexC)
+    {
+        Vector3 pointA = _verts[indexA];
+        Vector3 pointB = _verts[indexB];
+        Vector3 pointC = _verts[indexC];
+
+        Vector3 sideAB = pointB - pointA;
+        Vector3 sideAC = pointC - pointA;
+        
+        return Vector3.Cross(sideAB, sideAC).normalized;
+    }
+    
+    
     private void _ApplyMesh()
     {
         _myMesh.vertices = _verts;
         _myMesh.triangles = _tris;
+        _myMesh.normals = _normals;
         _myMesh.RecalculateNormals();
 
         _myMF.mesh = _myMesh;
