@@ -4,43 +4,41 @@ using System.Linq;
 using UnityEngine;
 
 public class CubeTreadmill : MonoBehaviour
-{
-    public GameObject cube;
+{    
+    #region Public Reference
     
     public GameObject target;
     public GameObject ChunkExample;
-    public int sizeSquare;//size square不在chunkExample中设定，在此脚本中设定，chunkExample引用这个脚本中的这个变量
+    public int sizeSquare;//sizeSquare is set in this script instead of in ChunkExample
+    public int _horizontalSize;
+    public int _verticalSize;
     
-    private List<GameObject> _cubes;
+    #endregion
+    
+    #region Internal Reference
     private List<GameObject> _chunks;
     private List<Vector2> _chunkGrid = new List<Vector2>();
     private List<Vector2> _chunkGenerate = new List<Vector2>();
     private List<Vector2> _chunkDestroy = new List<Vector2>();
-    private List<Vector2> _chunkStillList;
-    
-    public int _horizontalSize;
-    public int _verticalSize;
     
     private Dictionary<Vector2, GameObject> _chunkExample = new Dictionary<Vector2, GameObject>();
-
   
-    private Vector3 _intPos;
-    private Vector3 _currentIntPos;
-    private Vector3 _oldIntPos;
-   
-
     private Vector2 _oldCameraPos;
     private Vector2 _currentCameraPos;
-    private int _cameraViewDist;//用来记录camera周围能看到的位置，以格点来计算
+    private int _cameraViewDist;
     private List<Vector2> _newSpotList;
-
     
+    
+    private List<Vector2> _cameraViewList;
+    private List<Vector2> _chunksGridList;
+    private List<Vector2> _chunksDestroyList;
+    private GameObject _chunkToDestroy;
 
+    #endregion
     
     void Start()
     {
-       
-        //产生16个chunkExample
+        //Generating ChunkExaples
         _chunks = new List<GameObject>();
 
         for (int i = 0; i < _verticalSize; i++)
@@ -54,57 +52,32 @@ public class CubeTreadmill : MonoBehaviour
         
     }
 
-
-    private List<Vector2> _cameraViewList;
-    private List<Vector2> _chunksGridList;
-    private List<Vector2> _chunksStill;
-    private List<Vector2> _chunksDestroyList;
-    GameObject _chunkToDestroy;
-
-
-    
-    
     void Update()
     {
-
+        
+        //only do calculation when camera moves from one grid to another
         _currentCameraPos = UpdateCameraPos();
         if (_oldCameraPos != _currentCameraPos)
         {
             _cameraViewList = GetCameraView(_currentCameraPos);
             _chunksGridList = ConvertChunkToGrid();
-            
             DestroyGenerateCal(_cameraViewList, _chunksGridList);
-//            
-            for (int i = 0; i < _chunkGenerate.Count; i++)
-            {
-                print("chunkGenerate = " + _chunkGenerate[i]);
-
-            }
-        
-            for (int i = 0; i < _chunkDestroy.Count; i++)
-            {
-                print("chunkDestroy = " + _chunkDestroy[i]);
-
-            }
-
-
-            //销毁chunks
+            
+            //Destroy chunks
             foreach (Vector2 v in _chunkDestroy)
             {
                 _chunkExample.TryGetValue(v, out _chunkToDestroy);
             
                 Destroy(_chunkToDestroy);
                 _chunks.Remove(_chunkToDestroy);
-                print("destroy");
 
             }
 
 
-            //生成chunks
+            //Generate chunks
             for (int i = 0; i < _chunkGenerate.Count; i++)
 
             {
-                //生成
                 _chunks.Add(Instantiate(ChunkExample, new Vector3(_chunkGenerate[i].x * sizeSquare, 0, _chunkGenerate[i].y * sizeSquare), Quaternion.identity));
             }
             _chunkGenerate.Clear();
@@ -115,15 +88,11 @@ public class CubeTreadmill : MonoBehaviour
     }
 
 
-
-
     private Vector2 UpdateCameraPos()
     {
-        //得到camera所处的chunkExample坐标的位置
+        //get the coordinate of the camera
         int _currentCamCoordX = (int)(target.transform.position.x / sizeSquare); //currently size Square = 8
         int _currentCamCoordZ = (int)(target.transform.position.z / sizeSquare);
-
-        print("currentCamCoord =" + _currentCamCoordX + "," + _currentCamCoordZ);
 
         Vector2 _currentCameraPos = new Vector2(_currentCamCoordX, _currentCamCoordZ);
         return _currentCameraPos;
@@ -144,16 +113,12 @@ public class CubeTreadmill : MonoBehaviour
             Vector2 _grid = new Vector2(_gridX, _gridY);
 
             _chunkGrid.Add(_grid);
-            print("chunksGridddddddddddddddd =" + new Vector2(_gridX, _gridY)); 
            
-
-            
             GameObject temp;
             
             if (!_chunkExample.TryGetValue(_grid, out temp))
             {
-                _chunkExample.Add(_grid, g);//用Dictionary 记录两个信息，代替上面一行
-                //print("chunksGrid =" + new Vector2(_gridX, _gridY)); 
+                _chunkExample.Add(_grid, g);
             }
         } 
         
@@ -161,11 +126,11 @@ public class CubeTreadmill : MonoBehaviour
         return _chunkGrid;
     }
 
+    //get the coordinates where there should be chunks
     private List<Vector2> GetCameraView(Vector2 CamPos)
     {
         List<Vector2> _camView = new List<Vector2>();
 
-        //找到应该生成chunks的格点们,在camera周围
         for (int i = (0 - _horizontalSize)/2; i < _horizontalSize/2; i++)
         {
             for (int j = 0; j < _verticalSize; j++)
@@ -193,10 +158,7 @@ public class CubeTreadmill : MonoBehaviour
 
         
         List<Vector2> temp = new List<Vector2>();
-        
-        print("camViewCounttttttttttt = " + camView.Count);
-        print("chunkGridCounttttttttttttt = " + chunkGrid.Count);
-
+      
         //找到所有在camView中存在的chunkGrid的项，从_chunkGrid中删除,是要destroy的项
         //找到所有在camView中存在的chunkGrid的项，从_chunkView中删除，是要generate的项
 
@@ -205,11 +167,8 @@ public class CubeTreadmill : MonoBehaviour
 
             for (int j = 0; j < chunkGrid.Count; j++)
             {
-                print("i ============" + i);
-                print("cameView[i] + chunkGrid[j] = " + camView[i] + chunkGrid[j]);
                 if (camView[i] == chunkGrid[j])
                 {
-                    print("jjjjjjjjjjjjj = " + chunkGrid[j]);
                     temp.Add(chunkGrid[j]);
                     _chunkDestroy.Remove(chunkGrid[j]);
                     _chunkGenerate.Remove(chunkGrid[j]);
