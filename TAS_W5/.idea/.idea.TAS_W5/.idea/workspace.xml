@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="95429464-29e8-4a43-8f01-d9c672032eb0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../TAS_W6/New Unity Project/.idea/.idea.New Unity Project/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TAS_W6/New Unity Project/.idea/.idea.New Unity Project/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TAS_W6/New Unity Project/.idea/.idea.New Unity Project/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TAS_W6/New Unity Project/.idea/.idea.New Unity Project/.idea/vcs.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/CubeTreadmill.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+              <folding>
+                <marker date="1551732423688" expanded="false" signature="6:97" ph="..." />
+                <marker date="1551732423688" expanded="true" signature="141:5225" ph="{...}" />
+                <marker date="1551732423688" expanded="false" signature="152:417" ph="Public Reference" />
+                <marker date="1551732423688" expanded="false" signature="427:1130" ph="Internal Reference" />
+                <marker date="1551732423688" expanded="true" signature="1152:1618" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="1283:1594" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="1371:1584" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="1637:2681" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="1820:2630" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="2103:2303" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="2395:2584" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="2721:3088" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="3137:3786" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="3152:3211" ph="/* 把所有chunks的坐标都统一成格点上的单位坐标 ... */" />
+                <marker date="1551732423688" expanded="true" signature="3296:3736" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="3653:3726" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="3898:4278" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="4033:4238" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="4095:4228" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="4363:5222" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="4418:4482" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="4532:4597" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="4673:4795" ph="/* 找到所有在camView中存在的chunkGrid的项，从_chunkGrid中删除,是要destroy的项 ... */" />
+                <marker date="1551732423688" expanded="true" signature="4844:5215" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="4909:5205" ph="{...}" />
+                <marker date="1551732423688" expanded="true" signature="4971:5191" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChunkExample.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1215">
+              <caret line="215" column="53" selection-start-line="215" selection-start-column="53" selection-end-line="215" selection-end-column="53" />
+              <folding>
+                <marker date="1551731864312" expanded="false" signature="6:101" ph="..." />
+                <marker date="1551731864312" expanded="true" signature="144:8566" ph="{...}" />
+                <marker date="1551731864312" expanded="false" signature="151:832" ph="Internal references" />
+                <marker date="1551731864312" expanded="true" signature="858:1190" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="1216:1288" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="1314:2068" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="2099:7757" ph="{...}" />
+                <marker date="1551731864312" expanded="false" signature="2237:3867" ph="Vertices" />
+                <marker date="1551731864312" expanded="true" signature="2448:3848" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="2508:3838" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="2976:3118" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="3139:3275" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="3421:3824" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="3440:3696" ph="/* print(&quot;x = &quot; + x + &quot; z = &quot; + z); ... */" />
+                <marker date="1551731864312" expanded="false" signature="3877:6381" ph="Tris" />
+                <marker date="1551731864312" expanded="true" signature="4027:5389" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="4090:5379" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="4247:5365" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="5493:6362" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="5552:6352" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="6391:7750" ph="Normals" />
+                <marker date="1551731864312" expanded="true" signature="6561:7158" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="7215:7285" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="7384:7731" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="7444:7721" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="7559:7707" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="7828:8244" ph="{...}" />
+                <marker date="1551731864312" expanded="true" signature="8284:8563" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <marker date="1551726895162" expanded="false" signature="6:78" ph="..." />
+                <marker date="1551726895162" expanded="true" signature="125:389" ph="{...}" />
+                <marker date="1551726895162" expanded="true" signature="203:280" ph="{...}" />
+                <marker date="1551726895162" expanded="true" signature="299:377" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+              <folding>
+                <marker date="1551726741291" expanded="false" signature="6:78" ph="..." />
+                <marker date="1551726741291" expanded="true" signature="123:525" ph="{...}" />
+                <marker date="1551726741291" expanded="true" signature="266:278" ph="{...}" />
+                <marker date="1551726741291" expanded="true" signature="336:523" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>noise</find>
+      <find>Noise</find>
+      <find>Perlin</find>
+      <find>_currentCameraPos</find>
+      <find>newSpot</find>
+      <find>_chunkGrid</find>
+      <find>normals</find>
+      <find>print</find>
+      <find>vertexIndiceMa</find>
+      <find>_intPos</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Perlin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChunkExampleOriginal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChunkExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CubeTreadmill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ChunkManagement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scenes/Scripts/PerlinNoise.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Scripts/CubeTreadmill.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scenes/Scripts/ChunkExample.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChunkManagement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChunkExampleOriginal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ChunkExample.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CubeTreadmill.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="25" />
+    <option name="y" value="23" />
+    <option name="width" value="1648" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="UnityExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="UnityExplorer">
+        <option name="show-hidden-items" value="false" />
+        <option name="show-project-names" value="true" />
+      </pane>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="13384">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="13384" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor" />
+      <item itemvalue="Attach to Unity Editor.Attach to Unity Editor &amp; Play" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95429464-29e8-4a43-8f01-d9c672032eb0" name="Default Changelist" comment="" />
+      <created>1551109021441</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551109021441</updated>
+      <workItem from="1551109024769" duration="5645000" />
+      <workItem from="1551244400524" duration="1369000" />
+      <workItem from="1551279865065" duration="111000" />
+      <workItem from="1551280331288" duration="7749000" />
+      <workItem from="1551298017942" duration="8255000" />
+      <workItem from="1551388666645" duration="5545000" />
+      <workItem from="1551417236556" duration="23635000" />
+      <workItem from="1551655381653" duration="892000" />
+      <workItem from="1551656724239" duration="30101000" />
+      <workItem from="1551727420518" duration="104000" />
+      <workItem from="1551727551232" duration="3718000" />
+      <workItem from="1551884846525" duration="135000" />
+      <workItem from="1552150342317" duration="86000" />
+    </task>
+    <task id="LOCAL-00001" summary="Camera Enabled">
+      <created>1551655395563</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551655395563</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Mesh smoothed within the chunk">
+      <created>1551674992860</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1551674992860</updated>
+    </task>
+    <task id="LOCAL-00003" summary="reorganized the project after finishing it.">
+      <created>1551727481029</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1551727481029</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Final.">
+      <created>1551733803780</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551733803780</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="87345000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="25" y="23" width="1648" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14259028" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unity" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Camera Enabled" />
+    <MESSAGE value="Mesh smoothed within the chunk" />
+    <MESSAGE value="reorganized the project after finishing it." />
+    <MESSAGE value="Final." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Scripts/PerlinNoise.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Scripts/Perlin.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Scripts/CubeTreadmill.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Scripts/ChunkExample.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Perlin.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <marker date="1551109035075" expanded="true" signature="0:210" ph="/* Perlin noise generator for Unity ... */" />
+            <marker date="1551109035075" expanded="true" signature="264:2915" ph="Noise functions" />
+            <marker date="1551109035075" expanded="true" signature="327:1149" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="537:687" ph="/* u: 6x^5 - 15x^4 - 10x^3 ... */" />
+            <marker date="1551109035075" expanded="true" signature="721:1071" ph="/* returned value: is between &quot;+/-x&quot; or &quot;+/-(x-1)&quot; times 2 ... */" />
+            <marker date="1551109035075" expanded="true" signature="1198:1659" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="1705:1757" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="1815:2792" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="2838:2899" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="2921:5363" ph="Private functions" />
+            <marker date="1551109035075" expanded="true" signature="3040:3104" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="3238:3282" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="3288:3557" ph="/* Grad takes an integer &quot;hash&quot; and will return either &quot;x&quot; or &quot;-x&quot; ... */" />
+            <marker date="1551109035075" expanded="true" signature="3598:3651" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="3657:3867" ph="/* This Grad overflow method returns the sum of combination of &quot;+/-x&quot; and &quot;+/-y&quot; ... */" />
+            <marker date="1551109035075" expanded="true" signature="3917:4001" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="4061:4255" ph="{...}" />
+            <marker date="1551109035075" expanded="true" signature="4281:5346" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChunkManagement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <marker date="1551282557966" expanded="true" signature="124:308" ph="{...}" />
+            <marker date="1551282557966" expanded="true" signature="196:217" ph="{...}" />
+            <marker date="1551282557966" expanded="true" signature="275:296" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChunkExampleOriginal.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="241" column="40" lean-forward="true" selection-start-line="241" selection-start-column="40" selection-end-line="241" selection-end-column="40" />
+          <folding>
+            <marker date="1551697704536" expanded="false" signature="6:101" ph="..." />
+            <marker date="1551697704536" expanded="true" signature="152:8274" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="820:1081" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="1107:1179" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="1205:1901" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="1932:7618" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="2206:3542" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="2266:3532" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="2719:2861" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="2882:3018" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="3115:3518" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="3134:3390" ph="/* print(&quot;x = &quot; + x + &quot; z = &quot; + z); ... */" />
+            <marker date="1551697704536" expanded="true" signature="3676:5031" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="3739:5020" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="3832:5006" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="5117:5987" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="5176:5976" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="6067:6704" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="6753:6824" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="6903:7484" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="6963:7474" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="7054:7460" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="7073:7329" ph="/* print(&quot;j = &quot; + j + &quot; i = &quot; + i); ... */" />
+            <marker date="1551697704536" expanded="true" signature="7541:7611" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="7689:7975" ph="{...}" />
+            <marker date="1551697704536" expanded="true" signature="8015:8271" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CubeTreadmill.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+          <folding>
+            <marker date="1551732423688" expanded="false" signature="6:97" ph="..." />
+            <marker date="1551732423688" expanded="true" signature="141:5225" ph="{...}" />
+            <marker date="1551732423688" expanded="false" signature="152:417" ph="Public Reference" />
+            <marker date="1551732423688" expanded="false" signature="427:1130" ph="Internal Reference" />
+            <marker date="1551732423688" expanded="true" signature="1152:1618" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="1283:1594" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="1371:1584" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="1637:2681" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="1820:2630" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="2103:2303" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="2395:2584" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="2721:3088" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="3137:3786" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="3152:3211" ph="/* 把所有chunks的坐标都统一成格点上的单位坐标 ... */" />
+            <marker date="1551732423688" expanded="true" signature="3296:3736" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="3653:3726" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="3898:4278" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="4033:4238" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="4095:4228" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="4363:5222" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="4418:4482" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="4532:4597" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="4673:4795" ph="/* 找到所有在camView中存在的chunkGrid的项，从_chunkGrid中删除,是要destroy的项 ... */" />
+            <marker date="1551732423688" expanded="true" signature="4844:5215" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="4909:5205" ph="{...}" />
+            <marker date="1551732423688" expanded="true" signature="4971:5191" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/ChunkExample.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="215" column="53" selection-start-line="215" selection-start-column="53" selection-end-line="215" selection-end-column="53" />
+          <folding>
+            <marker date="1551731864312" expanded="false" signature="6:101" ph="..." />
+            <marker date="1551731864312" expanded="true" signature="144:8566" ph="{...}" />
+            <marker date="1551731864312" expanded="false" signature="151:832" ph="Internal references" />
+            <marker date="1551731864312" expanded="true" signature="858:1190" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="1216:1288" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="1314:2068" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="2099:7757" ph="{...}" />
+            <marker date="1551731864312" expanded="false" signature="2237:3867" ph="Vertices" />
+            <marker date="1551731864312" expanded="true" signature="2448:3848" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="2508:3838" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="2976:3118" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="3139:3275" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="3421:3824" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="3440:3696" ph="/* print(&quot;x = &quot; + x + &quot; z = &quot; + z); ... */" />
+            <marker date="1551731864312" expanded="false" signature="3877:6381" ph="Tris" />
+            <marker date="1551731864312" expanded="true" signature="4027:5389" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="4090:5379" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="4247:5365" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="5493:6362" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="5552:6352" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="6391:7750" ph="Normals" />
+            <marker date="1551731864312" expanded="true" signature="6561:7158" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="7215:7285" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="7384:7731" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="7444:7721" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="7559:7707" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="7828:8244" ph="{...}" />
+            <marker date="1551731864312" expanded="true" signature="8284:8563" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <marker date="1551726895162" expanded="false" signature="6:78" ph="..." />
+            <marker date="1551726895162" expanded="true" signature="125:389" ph="{...}" />
+            <marker date="1551726895162" expanded="true" signature="203:280" ph="{...}" />
+            <marker date="1551726895162" expanded="true" signature="299:377" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <marker date="1551726741291" expanded="false" signature="6:78" ph="..." />
+            <marker date="1551726741291" expanded="true" signature="123:525" ph="{...}" />
+            <marker date="1551726741291" expanded="true" signature="266:278" ph="{...}" />
+            <marker date="1551726741291" expanded="true" signature="336:523" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
