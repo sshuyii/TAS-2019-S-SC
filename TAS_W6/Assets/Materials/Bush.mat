@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bush
-  m_Shader: {fileID: 4800000, guid: 0957e49a83f9c4f2e984cc31ec36e587, type: 3}
+  m_Shader: {fileID: 4800000, guid: f2ab6ecfce13d4dafbdefc9c2ae938f1, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
