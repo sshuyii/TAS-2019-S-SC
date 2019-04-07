@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mobula
+  m_Name: InClassFishMaterial
   m_Shader: {fileID: 4800000, guid: 4a3547f75c78a4039a6deb69b7db883f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -56,20 +56,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Amplitude: 0.07
-    - _AmplitudeOffset: 0
-    - _AmplitudeOffsetBlue: 2.26
+    - _Amplitude: 0.01
     - _AplitudeOffset: 0
-    - _BlueAmplitude: 5
-    - _BlueOffset: 0
-    - _BluePositionalAmplitudeScaler: 0.05
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Float0: -0.18
-    - _Float1: 0
-    - _Frequency: 2.66
+    - _Frequency: 4.47
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -77,10 +70,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _PositionalAmplitudeScaler: 1.2
-    - _PositionalOffset: 3
-    - _PositionalOffsetScalar: 0
-    - _PositoinalAmplitudeScalar: 0
+    - _PositionalOffset: 30.8
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -91,3 +81,4 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Vector0: {r: 0, g: 0, b: 0, a: 0}
