@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Assets/Scripts/AutoAgentBehavior.cs" line="77" />
+    <bookmark url="file://$PROJECT_DIR$/Assets/Scripts/AutoAgentBehavior.cs" line="166" />
+    <bookmark url="file://$PROJECT_DIR$/Assets/Scripts/AutoAgentBehavior.cs" line="37" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8335265c-3efe-4eaf-8455-1e840ccc1fdf" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/AutoAgentBehavior.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="44" column="11" selection-start-line="35" selection-start-column="10" selection-end-line="44" selection-end-column="11" />
+              <folding>
+                <marker date="1554615013183" expanded="false" signature="6:181" ph="..." />
+                <marker date="1554615013183" expanded="true" signature="229:4844" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="663:842" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="865:1306" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="872:1300" ph="/* Vector3 toOther = FlockOrigin(collAll) - transform.position; ... */" />
+                <marker date="1554615013183" expanded="true" signature="1416:1458" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="1594:2066" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="1609:1728" ph="/* use the context, which is an array of the fishes created from the FlockManager ... */" />
+                <marker date="1554615013183" expanded="true" signature="1833:1938" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="2147:2310" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="2362:2785" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="2885:3284" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="2982:3124" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="3290:3360" ph="/* the flock direction that one fish wants to go to? ... */" />
+                <marker date="1554615013183" expanded="true" signature="3401:3931" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="3550:3616" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="3937:4030" ph="/* get the average direction that each fish in the school is moving toward ... */" />
+                <marker date="1554615013183" expanded="true" signature="4068:4320" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="4156:4233" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="4423:4545" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="4593:4838" ph="{...}" />
+                <marker date="1554615013183" expanded="true" signature="4694:4762" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/FishMovement.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+              <folding>
+                <marker date="1554615163411" expanded="false" signature="6:122" ph="..." />
+                <marker date="1554615163411" expanded="true" signature="165:937" ph="{...}" />
+                <marker date="1554615163411" expanded="true" signature="367:641" ph="{...}" />
+                <marker date="1554615163411" expanded="true" signature="382:469" ph="/* fish = GameObject.Find(&quot;Fish&quot;); ... */" />
+                <marker date="1554615163411" expanded="true" signature="660:935" ph="{...}" />
+                <marker date="1554615163411" expanded="true" signature="740:929" ph="/* print(&quot;TimeOffset = &quot; + _myMR.material.GetFloat(&quot;_TimeOffset&quot;) + &quot;velMag =&quot; + velMag); ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/FlockManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+              <folding>
+                <marker date="1554614645815" expanded="false" signature="6:78" ph="..." />
+                <marker date="1554614645815" expanded="true" signature="121:1806" ph="{...}" />
+                <marker date="1554614645815" expanded="true" signature="440:874" ph="{...}" />
+                <marker date="1554614645815" expanded="true" signature="667:810" ph="{...}" />
+                <marker date="1554614645815" expanded="true" signature="885:1000" ph="/* 下面这行代码好像有问题，只会记录离他最近的一个 ... */" />
+                <marker date="1554614645815" expanded="true" signature="1018:1804" ph="{...}" />
+                <marker date="1554614645815" expanded="true" signature="1134:1657" ph="{...}" />
+                <marker date="1554614645815" expanded="true" signature="1715:1780" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>context</find>
+      <find>moveDirection</find>
+      <find>moveDirec</find>
+      <find>Child</find>
+      <find>forward</find>
+      <find>print</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/Downloads/AutoAgentBehavior.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlockManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AutoAgentBehavior.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Prefabs/AutoAgent.prefab" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FishMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/FishShader.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/FlockManager.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/AutoAgentBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/FlockManager.cs" />
+        <option value="$USER_HOME$/Downloads/FlockManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MoveMyBirdFoward.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FlockManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AutoAgentBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FishMovement.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="13" />
+    <option name="y" value="23" />
+    <option name="width" value="1678" />
+    <option name="height" value="1027" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../RhythmGame" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8335265c-3efe-4eaf-8455-1e840ccc1fdf" name="Default Changelist" comment="" />
+      <created>1554130781760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554130781760</updated>
+      <workItem from="1554130785562" duration="4681000" />
+      <workItem from="1554137168458" duration="86000" />
+      <workItem from="1554300963917" duration="8630000" />
+      <workItem from="1554576893331" duration="19266000" />
+      <workItem from="1554615280581" duration="130000" />
+    </task>
+    <task id="LOCAL-00001" summary="W9 final">
+      <created>1554615357460</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1554615357460</updated>
+    </task>
+    <task id="LOCAL-00002" summary="W9 final">
+      <created>1554615396882</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554615396882</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="32793000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="13" y="23" width="1678" height="1027" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26190478" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Unity" order="10" weight="0.32941177" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Errors In Solution" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="W9 final" />
+    <option name="LAST_COMMIT_MESSAGE" value="W9 final" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/Downloads/AutoAgentBehavior.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <marker date="1554320372830" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554320372830" expanded="true" signature="126:2836" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="471:533" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="589:957" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="724:829" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="997:1380" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="1423:1798" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="1511:1577" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="1838:2091" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="1926:2003" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="2135:2513" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="2223:2289" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="2546:2608" ph="{...}" />
+            <marker date="1554320372830" expanded="true" signature="2680:2834" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/FlockManager.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/BirdShader.shader" />
+    <entry file="file://$PROJECT_DIR$/Assets/MoveMyBirdFoward.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/AutoAgentBehavior.cs" />
+    <entry file="file://$USER_HOME$/Downloads/FlockManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="5" lean-forward="true" selection-end-line="43" />
+          <folding>
+            <marker date="1554590546686" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554590546686" expanded="true" signature="121:1297" ph="{...}" />
+            <marker date="1554590546686" expanded="true" signature="327:665" ph="{...}" />
+            <marker date="1554590546686" expanded="true" signature="516:659" ph="{...}" />
+            <marker date="1554590546686" expanded="true" signature="729:1295" ph="{...}" />
+            <marker date="1554590546686" expanded="true" signature="781:1289" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/BirdShader.shader" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/MoveMyBirdFoward.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/FishShader.shader">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <marker date="1554593900062" expanded="true" signature="0:93" ph="/* Made with Amplify Shader Editor ... */" />
+            <marker date="1554593900062" expanded="true" signature="119:1534" ph="{...}" />
+            <marker date="1554593900062" expanded="true" signature="134:465" ph="{...}" />
+            <marker date="1554593900062" expanded="true" signature="479:1475" ph="{...}" />
+            <marker date="1554593900062" expanded="true" signature="562:1467" ph="{...}" />
+            <marker date="1554593900062" expanded="true" signature="1535:6483" ph="/* ASEBEGIN ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AutoAgentBehavior.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="44" column="11" selection-start-line="35" selection-start-column="10" selection-end-line="44" selection-end-column="11" />
+          <folding>
+            <marker date="1554615013183" expanded="false" signature="6:181" ph="..." />
+            <marker date="1554615013183" expanded="true" signature="229:4844" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="663:842" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="865:1306" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="872:1300" ph="/* Vector3 toOther = FlockOrigin(collAll) - transform.position; ... */" />
+            <marker date="1554615013183" expanded="true" signature="1416:1458" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="1594:2066" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="1609:1728" ph="/* use the context, which is an array of the fishes created from the FlockManager ... */" />
+            <marker date="1554615013183" expanded="true" signature="1833:1938" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="2147:2310" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="2362:2785" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="2885:3284" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="2982:3124" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="3290:3360" ph="/* the flock direction that one fish wants to go to? ... */" />
+            <marker date="1554615013183" expanded="true" signature="3401:3931" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="3550:3616" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="3937:4030" ph="/* get the average direction that each fish in the school is moving toward ... */" />
+            <marker date="1554615013183" expanded="true" signature="4068:4320" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="4156:4233" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="4423:4545" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="4593:4838" ph="{...}" />
+            <marker date="1554615013183" expanded="true" signature="4694:4762" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FlockManager.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
+          <folding>
+            <marker date="1554614645815" expanded="false" signature="6:78" ph="..." />
+            <marker date="1554614645815" expanded="true" signature="121:1806" ph="{...}" />
+            <marker date="1554614645815" expanded="true" signature="440:874" ph="{...}" />
+            <marker date="1554614645815" expanded="true" signature="667:810" ph="{...}" />
+            <marker date="1554614645815" expanded="true" signature="885:1000" ph="/* 下面这行代码好像有问题，只会记录离他最近的一个 ... */" />
+            <marker date="1554614645815" expanded="true" signature="1018:1804" ph="{...}" />
+            <marker date="1554614645815" expanded="true" signature="1134:1657" ph="{...}" />
+            <marker date="1554614645815" expanded="true" signature="1715:1780" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FishMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+          <folding>
+            <marker date="1554615163411" expanded="false" signature="6:122" ph="..." />
+            <marker date="1554615163411" expanded="true" signature="165:937" ph="{...}" />
+            <marker date="1554615163411" expanded="true" signature="367:641" ph="{...}" />
+            <marker date="1554615163411" expanded="true" signature="382:469" ph="/* fish = GameObject.Find(&quot;Fish&quot;); ... */" />
+            <marker date="1554615163411" expanded="true" signature="660:935" ph="{...}" />
+            <marker date="1554615163411" expanded="true" signature="740:929" ph="/* print(&quot;TimeOffset = &quot; + _myMR.material.GetFloat(&quot;_TimeOffset&quot;) + &quot;velMag =&quot; + velMag); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
